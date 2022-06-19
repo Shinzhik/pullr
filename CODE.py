@@ -23,12 +23,15 @@ if Vopros == 0:
 
 
 
+
     F = (p - 1) * (q - 1)
     for i in range(2, F):
         if (gcd(i, F) == 1):
             e = i
             break
-    i = 0
+
+i = 0
+
     while (i * e % F != 1):
         i += 1
         d = i
@@ -43,6 +46,6 @@ elif Vopros == 1:
     print("Enter Private Key")
     d = int(input("d = "))
     n = int(input("n = "))
-    c = int(input("Enter what need to decrypt  = "))  # i*e % F = 1 !@! i*d = 1 (mod F)
+    c = int(input("Enter what need to decrypt  = "))  # ie % F = 1 !@! id = 1 (mod F)
     M = (c ** d) % n
     print("Decrypt message = ",M)
